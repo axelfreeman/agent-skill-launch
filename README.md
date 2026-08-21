@@ -1,38 +1,49 @@
-# 🚀 Agent Skill Launch — the marketer's playbook for shipping AI-agent skills
+# 🚀 Agent Skill Launch — describe your skills so humans AND robots can read them
 
-**You built a skill. Nobody installed it. Here's why — and the fix.**
+**One repo. Three readers. Five cards.**
 
 [![skills.sh](https://skills.sh/b/axelfreeman/agent-skill-launch)](https://skills.sh/axelfreeman/agent-skill-launch)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ---
 
-Most "agent skills" are a SKILL.md that gets committed and forgotten. A few get thousands of installs. The difference isn't the code — it's three levers most builders never touch.
+First time putting a skill (or product) on GitHub? The hard part isn't the code — it's describing it so **three readers get it at once**:
 
-## The three levers
+1. **A human** landing on your repo — 10 seconds to "oh, I get it."
+2. **GitHub search** — so other people can find it.
+3. **AI agents** — so Claude, Cursor, and skills.sh actually load and cite it.
 
-### 1. Distribution is install-driven, not crawled
-[skills.sh](https://skills.sh) — the agent-skill directory (~10k skills, 1.3M+ installs) — doesn't crawl GitHub to find you. A repo appears on its leaderboard **only after someone runs `npx skills add owner/repo`**. That install fires telemetry, and **installs decide ranking, not stars**.
+Most first-timers write for one of these and lose the other two. This skill is the fix.
 
-→ Seed your own skill once. It's the difference between invisible and discoverable.
+## The five cards
 
-### 2. The `description` is the entire funnel
-The frontmatter `description` is read by Claude Code, Cursor, and skills.sh to decide **when the skill fires**. Write it as a long list of trigger situations — "Use when the user asks for …" — not a summary of what the skill does.
+A repo that reads well for humans and robots is a small stack of cards, each doing one job:
+
+| Card | Who reads it | What it does |
+|------|--------------|--------------|
+| `README.md` | humans | the story — what, why, how to start |
+| `SKILL.md` | agents | the playbook — its `description` is what fires it |
+| `AGENTS.md` | agents | trigger phrases + rules, so agents cite you correctly |
+| `llms.txt` | AI search | citable facts, so ChatGPT / Perplexity / Claude can quote you |
+| skills.sh badge | everyone | install count = social proof |
+
+Get the cards right and one repo serves GitHub search, agent search, and a human skimming it.
+
+## The `description` is the whole funnel
+
+One field matters more than the rest: the SKILL.md `description`. Agents read it to decide **when to fire the skill**, and skills.sh surfaces it in search. Write it as trigger situations, not a feature summary.
 
 **Wrong:** *"GitHub profile setup for non-programmers."*
 
-**Right:** *"Set up a GitHub profile and repo for a non-programmer … Use when a marketer or solopreneur wants to create or polish their GitHub presence, or publish their first repo without touching a terminal."*
+**Right:** *"Set up a GitHub profile and repo for a non-programmer … Use when a marketer or solopreneur wants to polish their GitHub presence, or publish their first repo without a terminal."*
 
-### 3. One memorable hook
-Skills that get cited and reposted carry a single quotable rule. A feature list doesn't travel; a hook does. Find your one line.
+## Distribution — install-driven, not crawled
 
-## What's inside
+[skills.sh](https://skills.sh) (~10k skills, 1.3M+ installs) doesn't crawl GitHub to find you. A repo is listed **only after someone runs `npx skills add owner/repo`** — installs decide ranking, not stars. Seed your own skill once.
 
-This repo is a SKILL.md that encodes the full playbook. Load it into any agent (Claude Code, Cursor, Codex, Gemini CLI, Hermes) and it will:
+## Don't want to write? Dictate it.
 
-- Write the SKILL.md correctly — `description` as the firing trigger.
-- Distribute it through skills.sh — seed, badge, verify.
-- Keep the repo clean — gitignore the byproducts.
+Hate writing descriptions? Install my [voice-to-article](https://github.com/axelfreeman/voice-to-article) skill — dictate your repo description as a voice note, and the agent writes the README/SKILL.md for you.
 
 ## Install
 
@@ -42,7 +53,7 @@ mkdir -p ~/.agents/skills
 ln -s "$PWD/agent-skill-launch" ~/.agents/skills/agent-skill-launch
 ```
 
-Or install directly:
+or
 
 ```bash
 npx skills add axelfreeman/agent-skill-launch
@@ -50,9 +61,9 @@ npx skills add axelfreeman/agent-skill-launch
 
 ## Who this is for
 
-- Marketers and founders shipping an AI-agent skill or AI-native product.
-- Indie hackers who want their skill to earn installs, not just stars.
-- Anyone asking "why did that skill go viral and mine didn't".
+- First-timers putting a skill or product on GitHub.
+- Builders who want one repo that serves humans, GitHub search, and AI agents.
+- Anyone who'd rather dictate than type their repo description.
 
 ## License
 
