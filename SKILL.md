@@ -47,11 +47,12 @@ Install the [voice-to-article](https://github.com/axelfreeman/voice-to-article) 
 1. `SKILL.md` at root (or per-subdir — subdir name = slug).
 2. Badge: `[![skills.sh](https://skills.sh/b/owner/repo)](https://skills.sh/owner/repo)`.
 3. Seed: `npx skills add owner/repo -y`.
-4. Verify: `npx skills add owner/repo --list` → "Found 1 skill"; `curl https://skills.sh/b/owner/repo` flips to "Skills: N" once indexed (async).
+4. Verify: `npx skills add owner/repo --list` → "Found 1 skill"; the badge endpoint `https://skills.sh/b/owner/repo` flips to "Skills: N" once indexed (async).
 5. Gitignore the byproducts first: `.agents/`, `skills-lock.json`, `uv.lock`, `site/` + `deploy/` (secrets).
 
 ## Install this skill
-`ln -s "$PWD" ~/.agents/skills/agent-skill-launch`
+
+`npx skills add axelfreeman/agent-skill-launch` (see README).
 
 ## Pitfalls
 - Don't describe the feature in `description` — name the trigger situations.
