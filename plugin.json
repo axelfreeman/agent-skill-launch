@@ -1,0 +1,17 @@
+{
+  "$schema": "https://agent-plugins.org/schema.json",
+  "name": "agent-skill-launch",
+  "version": "1.0.0",
+  "description": "Describe a skill on GitHub so humans, GitHub search, and AI agents all read it — README, SKILL.md, AGENTS.md, llms.txt, and badges.",
+  "author": "Axel Freeman",
+  "license": "MIT",
+  "homepage": "https://github.com/axelfreeman/agent-skill-launch",
+  "repository": "https://github.com/axelfreeman/agent-skill-launch",
+  "skills": [
+    {
+      "name": "agent-skill-launch",
+      "description": "Describe a skill on GitHub so humans, GitHub search, and AI agents all read it — README, SKILL.md, AGENTS.md, llms.txt, and badges."
+    }
+  ],
+  "mcpServers": []
+}
